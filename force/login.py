@@ -1,10 +1,11 @@
+from flask import redirect, request, make_response
+
 from force import app
 
-from flask import redirect, request, make_response
 from redis import Redis
+from jawbone.jawbone import Jawbone
 
 import requests
-from jawbone.jawbone import Jawbone
 
 site_root = "http://192.168.59.103"
 
@@ -14,9 +15,9 @@ jawbone_redirect_uri = "{0}/authorized/jawbone".format(site_root)
 scope = "basic_read,extended_read,location_read"
 
 
-@app.route("/")
-def index():
-    return make_response("You've hit 4ce!", 200)
+#@app.route("/")
+#def index():
+#    return make_response("You've hit 4ce!", 200)
 
 
 @app.route("/jawbone")

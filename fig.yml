@@ -4,5 +4,10 @@ force:
     - "80:5000"
   links:
     - redis
+    - mongo
+
 redis:
   image: redis
+
+mongo:
+  image: mongo
