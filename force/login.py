@@ -1,8 +1,7 @@
-from flask import Flask, redirect, request, make_response
+from force import app
+from flask import redirect, request, make_response
 import requests
 from jawbone.jawbone import Jawbone
-
-app = Flask(__name__)
 
 client_id = "KOls4_kxR_Q"
 client_secret = "d84b648530a3aa9029322c37fa77c75ce64664a4"
@@ -42,6 +41,3 @@ def login():
     print response.json()
 
     return make_response("Success!", 200)
-
-if __name__ == "__main__":
-    app.run()

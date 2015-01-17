@@ -6,4 +6,7 @@ MAINTAINER Robert Wlodarczyk (http://github.com/SimplicityGuy)
 
 EXPOSE 80
 
-CMD [ "gunicorn", "-c", "gunicorn-config.py", "flask-example:app" ]
+ADD ./force /usr/src/app/force
+WORKDIR /usr/src/app
+
+CMD [ "gunicorn", "-c", "gunicorn-config.py", "force:app" ]
