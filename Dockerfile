@@ -4,7 +4,7 @@ FROM python:2-onbuild
 
 MAINTAINER Robert Wlodarczyk (http://github.com/SimplicityGuy)
 
-EXPOSE 80
+EXPOSE 5000
 
 ADD ./force /usr/src/app/force
 WORKDIR /usr/src/app

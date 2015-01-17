@@ -7,3 +7,4 @@ itsdangerous==0.24
 wsgiref==0.1.2
 jawbone-up==0.1
 requests==2.5.1
+redis==2.10.3

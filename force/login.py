@@ -1,5 +1,6 @@
 from force import app
 from flask import redirect, request, make_response
+from redis import Redis
 import requests
 from jawbone.jawbone import Jawbone
 
@@ -40,4 +41,7 @@ def login():
     print
     print response.json()
 
-    return make_response("Success!", 200)
+    redis = Redis(host="redis_1", port=6379)
+    redis.incr("hits")
+
+    return make_response("Success! ({0})".format(redis.get("hits")), 200)
