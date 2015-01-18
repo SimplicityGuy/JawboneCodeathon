@@ -22,6 +22,7 @@ from force.auth import auth_flask_login
 app.register_blueprint(notes_app)
 app.register_blueprint(auth_flask_login)
 
-from force import login
+from force import jawbone
+from force import mailchimp
 from force import notes
 from force import auth
