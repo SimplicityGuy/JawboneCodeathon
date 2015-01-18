@@ -6,49 +6,330 @@
     <head>
         {% block head %}
 
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>4ce</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0-rc2/css/bootstrap.min.css">
-        <style>
-            body {
-                padding-top: 60px;
-                padding-bottom: 40px;
-            }
-        </style>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+        <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0-rc2/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="/static/css/jquery-ui-themes.css" />
+        <link rel="stylesheet" type="text/css" href="/static/css/axure_rp_page.css" />
+        <link rel="stylesheet" type="text/css" href="/static/css/styles.css" />
+        {% if current_user.is_authenticated() %}
+        <link type="text/css" rel="stylesheet" href="/static/css/files/home/styles.css" />
+        {% else %}
+        <link type="text/css" rel="stylesheet" href="/static/css/files/newuser/styles.css" />
+        {% endif %}
         <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+        <script src="/static/js/jquery-1.7.1.min.js"></script>
+        <script src="/static/js/jquery-ui-1.8.10.custom.min.js"></script>
+        <script src="/static/js/axure/axQuery.js"></script>
+        <script src="/static/js/axure/globals.js"></script>
+        <script src="/static/js/axutils.js"></script>
+        <script src="/static/js/axure/annotation.js"></script>
+        <script src="/static/js/axure/axQuery.std.js"></script>
+        <script src="/static/js/axure/doc.js"></script>
+        <script src="/static/js/document.js"></script>
+        <script src="/static/js/messagecenter.js"></script>
+        <script src="/static/js/axure/events.js"></script>
+        <script src="/static/js/axure/action.js"></script>
+        <script src="/static/js/axure/expr.js"></script>
+        <script src="/static/js/axure/geometry.js"></script>
+        <script src="/static/js/axure/flyout.js"></script>
+        <script src="/static/js/axure/ie.js"></script>
+        <script src="/static/js/axure/model.js"></script>
+        <script src="/static/js/axure/repeater.js"></script>
+        <script src="/static/js/axure/sto.js"></script>
+        <script src="/static/js/axure/utils.temp.js"></script>
+        <script src="/static/js/axure/variables.js"></script>
+        <script src="/static/js/axure/drag.js"></script>
+        <script src="/static/js/axure/move.js"></script>
+        <script src="/static/js/axure/visibility.js"></script>
+        <script src="/static/js/axure/style.js"></script>
+        <script src="/static/js/axure/adaptive.js"></script>
+        <script src="/static/js/axure/tree.js"></script>
+        <script src="/static/js/axure/init.temp.js"></script>
+        {% if current_user.is_authenticated() %}
+        <script src="/static/js/files/home/data.js"></script>
+        {% else %}
+        <script src="/static/js/files/newuser/data.js"></script>
+        {% endif %}
+        <script src="/static/js/axure/legacy.js"></script>
+        <script src="/static/js/axure/viewer.js"></script>
+        <script type="text/javascript">
+          $axure.utils.getTransparentGifPath = function() { return '/static/img/transparent.gif'; };
+          $axure.utils.getOtherPath = function() { return 'static/Other.html'; };
+          $axure.utils.getReloadPath = function() { return 'static/reload.html'; };
+        </script>
 
         {% endblock %}
     </head>
   <body>
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <a class="navbar-brand" href="#">use the 4ce</a>
-      <ul class="nav navbar-nav">
-        <li>
-          <a href="/">Home</a>
-        </li>
-        {% if current_user.is_authenticated() %}
-        <li>
-          <a href="/notes/create">Create new note</a>
-        </li>
-        <li>
-          <a href="#">{{current_user.email}}</a>
-        </li>
-        <li>
-          <a href="/logout">Logout</a>
-        </li>
-        {% else %}
-        <li><a href="/login">Login</a></li>
-        <li><a href="/register">Register</a></li>
-        {% endif %}
-      </ul>
-    </nav>
-    <div class="container">
-      {% block main %}{% endblock %}
-      <hr>
-    </div> <!-- /container -->
+    <div id="base" class="">
+      {% if current_user.is_authenticated() %}
+      <div id="u0" class="ax_image">
+        <img id="u0_img" class="img " src="/static/img/u0.jpg"/>
+        <div id="u1" class="text">
+          <p><span></span></p>
+        </div>
+      </div>
+      <div id="u3" class="ax_shape">
+        <img id="u3_img" class="img " src="/static/img/u3.png"/>
+        <div id="u4" class="text">
+          <p><span></span></p>
+        </div>
+      </div>
+      <div id="u5" class="ax_image">
+        <img id="u5_img" class="img " src="/static/img/u5.png"/>
+        <div id="u6" class="text">
+          <p><span></span></p>
+        </div>
+      </div>
+      <div id="u7" class="ax_image">
+        <img id="u7_img" class="img " src="/static/img/u7.png"/>
+        <div id="u8" class="text">
+          <p><span></span></p>
+        </div>
+      </div>
+      <div id="u9" class="ax_image">
+        <img id="u9_img" class="img " src="/static/img/u9.png"/>
+        <div id="u10" class="text">
+          <p><span></span></p>
+        </div>
+      </div>
+      <div id="u11" class="ax_dynamic_panel">
+        <div id="u11_state0" class="panel_state" data-label="mobile menu">
+          <div id="u11_state0_content" class="panel_state_content">
+            <div id="u12" class="ax_shape">
+              <img id="u12_img" class="img " src="/static/img/u12.png"/>
+              <div id="u13" class="text">
+                <p><span></span></p>
+              </div>
+            </div>
+            <div id="u14" class="ax_h1">
+              <img id="u14_img" class="img " src="/static/img/transparent.gif"/>
+              <div id="u15" class="text">
+                <p><span>USER</span></p>
+              </div>
+            </div>
+            <div id="u16" class="ax_h1">
+              <img id="u16_img" class="img " src="/static/img/transparent.gif"/>
+              <div id="u17" class="text">
+                <p><span>LEADER </span></p><p><span>BOARD</span></p>
+              </div>
+            </div>
+            <div id="u18" class="ax_h1">
+              <img id="u18_img" class="img " src="/static/img/transparent.gif"/>
+              <div id="u19" class="text">
+                <p><span>CHALLENGE</span></p><p><span>FRIENDS</span></p>
+              </div>
+            </div>
+            <div id="u20" class="ax_h1">
+              <img id="u20_img" class="img " src="/static/img/transparent.gif"/>
+              <div id="u21" class="text">
+                <p><span>SIGN</span></p><p><span>OUT</span></p>
+              </div>
+            </div>
+            <div id="u22" class="ax_horizontal_line">
+              <img id="u22_start" class="img " src="/static/img/transparent.gif" alt="u22_start"/>
+              <img id="u22_end" class="img " src="/static/img/transparent.gif" alt="u22_end"/>
+              <img id="u22_line" class="img " src="/static/img/u22_line.png" alt="u22_line"/>
+            </div>
+            <div id="u23" class="ax_horizontal_line">
+              <img id="u23_start" class="img " src="/static/img/transparent.gif" alt="u23_start"/>
+              <img id="u23_end" class="img " src="/static/img/transparent.gif" alt="u23_end"/>
+              <img id="u23_line" class="img " src="/static/img/u22_line.png" alt="u23_line"/>
+            </div>
+            <div id="u24" class="ax_horizontal_line">
+              <img id="u24_start" class="img " src="/static/img/transparent.gif" alt="u24_start"/>
+              <img id="u24_end" class="img " src="/static/img/transparent.gif" alt="u24_end"/>
+              <img id="u24_line" class="img " src="/static/img/u22_line.png" alt="u24_line"/>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% else %}
+      <div id="u0" class="ax_image">
+        <img id="u0_img" class="img " src="/static/img/u0.jpg"/>
+        <div id="u1" class="text">
+          <p><span>z</span></p>
+        </div>
+      </div>
+      <div id="u2" class="ax_shape">
+        <img id="u2_img" class="img " src="/static/img/u0.png"/>
+        <div id="u3" class="text">
+          <p><span></span></p>
+        </div>
+      </div>
+      <div id="u4" class="ax_image">
+        <img id="u4_img" class="img " src="/static/img/u5.png"/>
+        <div id="u5" class="text">
+          <p><span></span></p>
+        </div>
+      </div>
+      <div id="u6" class="ax_dynamic_panel">
+        <div id="u6_state0" class="panel_state" data-label="mobile menu">
+          <div id="u6_state0_content" class="panel_state_content">
+            <div id="u7" class="ax_shape">
+              <img id="u7_img" class="img " src="/static/img/u12.png"/>
+              <div id="u8" class="text">
+                <p><span></span></p>
+              </div>
+            </div>
+            <div id="u9" class="ax_h1">
+              <img id="u9_img" class="img " src="/static/img/transparent.gif"/>
+              <div id="u10" class="text">
+                <p><span>USER</span></p>
+              </div>
+            </div>
+            <div id="u11" class="ax_h1">
+              <img id="u11_img" class="img " src="/static/img/transparent.gif"/>
+              <div id="u12" class="text">
+                <p><span>LEADER </span></p><p><span>BOARD</span></p>
+              </div>
+            </div>
+            <div id="u13" class="ax_h1">
+              <img id="u13_img" class="img " src="/static/img/transparent.gif"/>
+              <div id="u14" class="text">
+                <p><span>CHALLENGE</span></p><p><span>FRIENDS</span></p>
+              </div>
+            </div>
+            <div id="u15" class="ax_h1">
+              <img id="u15_img" class="img " src="/static/img/transparent.gif"/>
+              <div id="u16" class="text">
+                <p><span>SIGN</span></p><p><span>OUT</span></p>
+              </div>
+            </div>
+            <div id="u17" class="ax_horizontal_line">
+              <img id="u17_start" class="img " src="/static/img/transparent.gif" alt="u17_start"/>
+              <img id="u17_end" class="img " src="/static/img/transparent.gif" alt="u17_end"/>
+              <img id="u17_line" class="img " src="/static/img/u22_line.png" alt="u17_line"/>
+            </div>
+            <div id="u18" class="ax_horizontal_line">
+              <img id="u18_start" class="img " src="/static/img/images/transparent.gif" alt="u18_start"/>
+              <img id="u18_end" class="img " src="/static/img/transparent.gif" alt="u18_end"/>
+              <img id="u18_line" class="img " src="/static/img/u22_line.png" alt="u18_line"/>
+            </div>
+            <div id="u19" class="ax_horizontal_line">
+              <img id="u19_start" class="img " src="/static/img/transparent.gif" alt="u19_start"/>
+              <img id="u19_end" class="img " src="/static/img/transparent.gif" alt="u19_end"/>
+              <img id="u19_line" class="img " src="/static/img/u22_line.png" alt="u19_line"/>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="u20" class="ax_shape">
+        <img id="u20_img" class="img " src="/static/img/u20.png"/>
+        <div id="u21" class="text">
+          <p><span></span></p>
+        </div>
+      </div>
+      <div id="u22" class="ax_shape">
+        <img id="u22_img" class="img " src="/static/img/u20.png"/>
+        <div id="u23" class="text">
+          <p><span></span></p>
+        </div>
+      </div>
+      <div id="u24" class="ax_image">
+        <img id="u24_img" class="img " src="/static/img/u24.png"/>
+        <div id="u25" class="text">
+          <p><span></span></p>
+        </div>
+      </div>
+      <div id="u26" class="ax_h1">
+        <img id="u26_img" class="img " src="/static/img/transparent.gif"/>
+        <div id="u27" class="text">
+          <p><span>SIGN</span></p><p><span>IN</span></p>
+        </div>
+      </div>
+      <div id="u28" class="ax_h2">
+        <img id="u28_img" class="img " src="/static/img/transparent.gif"/>
+        <div id="u29" class="text">
+          <p><span>OR</span></p>
+        </div>
+      </div>
+      <div id="u30" class="ax_text_field">
+        <input id="u30_input" type="password" value="" maxlength="8"/>
+      </div>
+      <div id="u31" class="ax_html_button">
+        <input id="u31_input" type="submit" value="Start 30 Days of Force"/>
+      </div>
+      <div id="u32" class="ax_text_field">
+        <input id="u32_input" type="email" value=""/>
+      </div>
+      <div id="u33" class="ax_text_field">
+        <input id="u33_input" type="text" value="" maxlength="8"/>
+      </div>
+      <div id="u34" class="ax_shape">
+        <img id="u34_img" class="img " src="/static/img/u34.png"/>
+        <div id="u35" class="text">
+          <p><span></span></p>
+        </div>
+      </div>
+      <div id="u36" class="ax_shape">
+        <img id="u36_img" class="img " src="/static/img/u34.png"/>
+        <div id="u37" class="text">
+          <p><span></span></p>
+        </div>
+      </div>
+      <div id="u38" class="ax_h1">
+        <img id="u38_img" class="img " src="/static/img/transparent.gif"/>
+        <div id="u39" class="text">
+          <p><span>SIGN UP</span></p>
+        </div>
+      </div>
+      <div id="u40" class="ax_h1">
+        <img id="u40_img" class="img " src="/static/img/transparent.gif"/>
+        <div id="u41" class="text">
+          <p><span>LEARN</span></p><p><span>MORE</span></p>
+        </div>
+      </div>
+      <div id="u42" class="ax_image">
+        <img id="u42_img" class="img " src="/static/img/u42.jpg"/>
+        <div id="u43" class="text">
+          <p><span></span></p>
+        </div>
+      </div>
+      <div id="u44" class="ax_dynamic_panel" data-label="sign in">
+        <div id="u44_state0" class="panel_state" data-label="State1">
+          <div id="u44_state0_content" class="panel_state_content">
+            <div id="u45" class="ax_shape">
+              <img id="u45_img" class="img " src="/static/img/u45.png"/>
+              <div id="u46" class="text">
+                <p><span></span></p>
+              </div>
+            </div>
+            <div id="u47" class="ax_image">
+              <img id="u47_img" class="img " src="/static/img/u24.png"/>
+              <div id="u48" class="text">
+                <p><span></span></p>
+              </div>
+            </div>
+            <div id="u49" class="ax_text_field">
+              <input id="u49_input" type="password" value="" maxlength="8"/>
+            </div>
+            <div id="u50" class="ax_text_field">
+              <input id="u50_input" type="email" value="" maxlength="8"/>
+            </div>
+            <div id="u51" class="ax_h2">
+              <img id="u51_img" class="img " src="/static/img/transparent.gif"/>
+              <div id="u52" class="text">
+                <p><span>OR</span></p>
+              </div>
+            </div>
+            <div id="u53" class="ax_html_button">
+              <input id="u53_input" type="submit" value="Log In"/>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+
+      <div class="container">
+        {% block main %}{% endblock %}
+        <hr>
+      </div>
+    </div>
 
     {% block scripts %}
 

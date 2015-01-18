@@ -3,7 +3,7 @@ from flask.ext.mongoengine import MongoEngine, MongoEngineSessionInterface
 from flask.ext.login import LoginManager
 from flask.ext.bcrypt import Bcrypt
 
-app = Flask("4ce")
+app = Flask("4ce", static_folder="/usr/src/app/force/static")
 app.config.from_object("config")
 app.debug = True
 
@@ -22,7 +22,6 @@ from force.auth import auth_flask_login
 app.register_blueprint(notes_app)
 app.register_blueprint(auth_flask_login)
 
-from force import jawbone
-from force import mailchimp
+from force import login
 from force import notes
 from force import auth
