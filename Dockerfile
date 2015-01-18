@@ -9,5 +9,5 @@ EXPOSE 5000
 ADD ./force /usr/src/app/force
 WORKDIR /usr/src/app
 
-CMD [ "python", "run.py" ]
-#CMD [ "gunicorn", "-c", "gunicorn-config.py", "force:app" ]
+#CMD [ "python", "run.py" ]
+CMD [ "gunicorn", "-c", "gunicorn-config.py", "force:app" ]
