@@ -30,7 +30,6 @@ def login():
 @auth_flask_login.route("/register", methods=["GET", "POST"])
 def register():
     registerForm = forms.SignupForm(request.form)
-    current_app.logger.info(request.form)
 
     if request.method == "POST" and registerForm.validate() is False:
         current_app.logger.info(registerForm.errors)
